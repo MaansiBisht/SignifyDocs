@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.custom-form-wrapper .formio-component-textfield input {
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.custom-form-wrapper .formio-component-textfield textarea {
+  border: 2px solid gray;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: 150px;
+}
+
+.custom-form-wrapper .formio-component-submit button {
+  background-color: #4f46e5;
+  color: white;              
+  padding: 0.75rem 1.5rem;  
+  border-radius: 0.5rem;     
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.custom-form-wrapper .formio-component-submit button:hover {
+  background-color: #3b3c9b; /* Darker indigo on hover */
+}
