@@ -33,21 +33,9 @@ This project is a document management system where users can create, submit, and
 - **For Users:**
   - Display a list of their created and submitted documents along with current statuses.
 
-### 5. Notifications:
-- Users are notified when their document is approved or rejected.
+##  Implemented Bonus Features
 
-## Bonus Features
-
-### 1. Document History:
-- Track and display changes made to the document over time.
-
-### 2. Audit Logs:
-- Maintain logs of all approval/rejection actions with timestamps and admin details.
-
-### 3. Export Document:
-- Users can export their submitted documents as a **PDF** using **jsPDF**.
-
-### 4. Mobile Responsiveness:
+### 1. Mobile Responsiveness:
 - The application is mobile-friendly, ensuring a smooth user experience across devices.
 
 ## Tech Stack
@@ -76,5 +64,5 @@ This project is a document management system where users can create, submit, and
 
 ### 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/document-approval.git
-cd document-approval
+git clone https://github.com/MaansiBisht/SignifyDocs.git
+
