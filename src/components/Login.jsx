@@ -14,7 +14,7 @@ const Login = () => {
       const idToken = await userCredential.user.getIdToken();
 
       // Send the ID token to your backend
-      const response = await fetch("http://localhost:8000/api/login", {
+      const response = await fetch(`${process.env.url}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
