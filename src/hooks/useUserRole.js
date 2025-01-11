@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { auth, onAuthStateChanged } from '../firebase'; // Assuming auth is initialized
 
 const useUserRole = () => {
@@ -8,7 +8,7 @@ const useUserRole = () => {
     useEffect(() => {
         const fetchUserRole = async (uid, token) => {
             try {
-                const response = await fetch(`${process.env.url}/api/users/${uid}/role`, {
+                const response = await fetch(`${process.env.REACT_APP_URL}/api/users/${uid}/role`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

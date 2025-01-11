@@ -6,7 +6,7 @@ const AdminDashboard = ({ user }) => {
 
     useEffect(() => {
         if (user && user.uid) {
-            fetch(`${process.env.url}/api/documents/users`, // get all users document for admin
+            fetch(`${process.env.REACT_APP_URL}/api/documents/users`, // get all users document for admin
                 {
                     headers: {
                         'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ const AdminDashboard = ({ user }) => {
     }, [user]);
 
     const handleChangeStatus = (documentId, status) => {
-        fetch(`${process.env.url}/api/document/updatestatus`, {
+        fetch(`${process.env.REACT_APP_URL}/api/document/updatestatus`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -30,7 +30,7 @@ const DynamicForm = () => {
   const onSubmitHandler = async (submission) => {  
 
     try {
-      const response = await fetch('http://localhost:8000/api/submit', {
+      const response = await fetch(`${process.env.REACT_APP_URL}/api/submit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

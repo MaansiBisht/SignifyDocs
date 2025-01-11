@@ -12,9 +12,9 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const idToken = await userCredential.user.getIdToken();
-
+      console.log(process.env.REACT_APP_URL);
       // Send the ID token to your backend
-      const response = await fetch(`${process.env.url}/api/login`, {
+      const response = await fetch(`${process.env.REACT_APP_URL}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

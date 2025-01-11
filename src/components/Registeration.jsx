@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { auth, createUserWithEmailAndPassword } from '../firebase';
-import { firestore } from '../firebase'; // Assuming you've initialized Firestore
-import { setDoc, doc } from 'firebase/firestore'; // For Firestore document creation
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'; // Eye icons for visibility toggle
 import { useNavigate } from 'react-router-dom';
 
@@ -27,7 +25,7 @@ const Register = () => {
             const idToken = await userCredential.user.getIdToken(); // Get Firebase ID token
 
             // Send the ID token and additional user data to your backend
-            const response = await fetch(`${process.env.url}/api/register`, {
+            const response = await fetch(`${process.env.REACT_APP_URL}/api/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

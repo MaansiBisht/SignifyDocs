@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 
 const UserDashboard = ({ user }) => {
-    const [documents, setDocuments] = useState([]);
     const [userDocuments, setUserDocuments] = useState([]);
 
     useEffect(() => {
         if (user && user.uid) {
-            fetch(`${process.env.url}/api/documents/user/${user.uid}`, //getting only users document
+            fetch(`${process.env.REACT_APP_URL}/api/documents/user/${user.uid}`, //getting only users document
                 {
                     headers: {
                         'Content-Type': 'application/json',
